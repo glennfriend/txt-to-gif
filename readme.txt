@@ -1,5 +1,5 @@
 install
-    imagemagick
+    apt-get install imagemagick
 
 find your fonts
     ./tool/imageick_type_gen > type.xml
