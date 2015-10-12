@@ -17,6 +17,7 @@
     $totalPage = $index;
 
     buildDynamicGif($totalPage);
+    clearFolder();
     exit;
 
 
@@ -78,3 +79,16 @@
         }
     }
 
+    /**
+     *
+     */
+    function clearFolder()
+    {
+        $dir = __DIR__;
+        foreach (glob("{$dir}/tmp/*.txt") as $file) {
+            unlink($file);
+        }
+        foreach (glob("{$dir}/tmp/*.gif") as $file) {
+            unlink($file);
+        }
+    }
