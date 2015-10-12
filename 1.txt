@@ -1,0 +1,41 @@
+aaaaaaaaaaaaaaaaaaaa
+b                  b
+c                  c
+d                  d
+eeeeeeeeeeeeeeeeeeee
+----
+aaaaaaaaaaaaaaaaaaaa
+b@                 b
+c                  c
+d                  d
+eeeeeeeeeeeeeeeeeeee
+----
+aaaaaaaaaaaaaaaaaaaa
+b @                b
+c                  c
+d                  d
+eeeeeeeeeeeeeeeeeeee
+----
+aaaaaaaaaaaaaaaaaaaa
+b  @               b
+c                  c
+d                  d
+eeeeeeeeeeeeeeeeeeee
+----
+aaaaaaaaaaaaaaaaaaaa
+b   @              b
+c                  c
+d                  d
+eeeeeeeeeeeeeeeeeeee
+----
+aaaaaaaaaaaaaaaaaaaa
+b                  b
+c   @              c
+d                  d
+eeeeeeeeeeeeeeeeeeee
+----
+aaaaaaaaaaaaaaaaaaaa
+b                  b
+c                  c
+d   @              d
+eeeeeeeeeeeeeeeeeeee

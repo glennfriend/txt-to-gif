@@ -1,0 +1,8 @@
+參數說明
+
+    圖片大小    -size 400x300
+    字體大小    -pointsize 18       
+    字型        -font fonts/DroidSansMono.ttf
+    字體顏色    -fill white
+    字體背景色  -background black
+    邊框        -border 10x10 -bordercolor black
