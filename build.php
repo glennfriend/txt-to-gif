@@ -6,6 +6,8 @@
 
     list($file, $type) = parseArgv($argv);
 
+    clearFolder();
+
     $text = file_get_contents($file);    
     $lines = explode("----\n", $text);
     $files = [];
@@ -17,7 +19,6 @@
     $totalPage = $index;
 
     buildDynamicGif($totalPage);
-    clearFolder();
     exit;
 
 
@@ -29,13 +30,14 @@
     function buildStaticGif($index, $content)
     {
         $dir = __DIR__;
-        $pageFile =  $dir . '/tmp/' . $index . '.txt';
+        $number = sprintf("%02d", $index);
+        $pageFile =  "{$dir}/tmp/{$number}.txt";
         
         // build text
         file_put_contents($pageFile, $content);
 
         // build static gif
-        exec("cat {$pageFile} | convert -size 400x300 -pointsize 20 -font {$dir}/fonts/DroidSansMono.ttf -fill white -background black -border 10x10 -bordercolor black label:@- $dir/tmp/{$index}.gif");
+        exec("cat {$pageFile} | convert -size 700x300 -pointsize 16 -font {$dir}/fonts/DroidSansMono.ttf -fill white -background black -border 10x10 -bordercolor black label:@- $dir/tmp/{$number}.gif");
     }
 
     /**
@@ -44,7 +46,7 @@
     function buildDynamicGif($totalPage)
     {
         $dir = __DIR__;
-        exec("convert -delay 30 -loop 0 {$dir}/tmp/*.gif {$dir}/output/output.gif");
+        exec("convert -delay 100 -loop 0 {$dir}/tmp/*.gif {$dir}/output/output.gif");
     }
 
     /**
